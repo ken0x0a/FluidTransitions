@@ -4,25 +4,28 @@
  * @flow
  */
 
-import React from 'react';
-import { createStackNavigator, createNavigationContainer } from 'react-navigation';
-import { useScreens } from 'react-native-screens';
+import React from "react";
+import { createStackNavigator, createAppContainer } from "react-navigation";
+import { useScreens } from "react-native-screens";
 
-import HomeScreen from './Examples/HomeScreen';
-import SharedElements from './Examples/SharedElements';
-import AppearingElements from './Examples/AppearingElements';
-import ImageTransition from './Examples/ImageTransition';
-import LayoutTransition from './Examples/LayoutTransition';
-import Onboarding from './Examples/Onboarding';
-import ShoeShop from './Examples/ShoeShop';
-import FlatList from './Examples/FlatList';
-import AnimatedProperty from './Examples/AnimatedProperty';
-import Playground from './Examples/Playground';
+import HomeScreen from "./Examples/HomeScreen";
+import SharedElements from "./Examples/SharedElements";
+import AppearingElements from "./Examples/AppearingElements";
+import ImageTransition from "./Examples/ImageTransition";
+import LayoutTransition from "./Examples/LayoutTransition";
+import Onboarding from "./Examples/Onboarding";
+import ShoeShop from "./Examples/ShoeShop";
+import FlatList from "./Examples/FlatList";
+import AnimatedProperty from "./Examples/AnimatedProperty";
+import Playground from "./Examples/Playground";
 
 useScreens();
 
 const ExampleNavigator = createStackNavigator({
-  home: { screen: HomeScreen, navigationOptions: { title: 'Fluid Transitions' } },
+  home: {
+    screen: HomeScreen,
+    navigationOptions: { title: "Fluid Transitions" }
+  },
   shared: { screen: SharedElements },
   appear: { screen: AppearingElements },
   image: { screen: ImageTransition },
@@ -30,7 +33,7 @@ const ExampleNavigator = createStackNavigator({
   onboarding: { screen: Onboarding },
   shoes: { screen: ShoeShop },
   flatlist: { screen: FlatList },
-  animatedProperty: { screen: AnimatedProperty },
+  animatedProperty: { screen: AnimatedProperty }
 });
 
-export default createNavigationContainer(ExampleNavigator);
+export default createAppContainer(ExampleNavigator);

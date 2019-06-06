@@ -1,4 +1,30 @@
 {
-  "name": "FluidTransitions2",
-  "displayName": "FluidTransitions2"
+  "expo": {
+    "name": "FluidTransitions2",
+    "slug": "FluidTransitions2",
+    "privacy": "unlisted",
+    "sdkVersion": "33.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "description": ""
+  }
 }
