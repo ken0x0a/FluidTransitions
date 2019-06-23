@@ -30,7 +30,15 @@ or
 
 `npm i -S react-navigation-fluid-transitions`
 
-> Note on versions: react-navigation-fluid-transitions@0.2.x is compatible with react-navigation@2.0.x, while react-navigation-fluid-transitions@0.1.x is compatible with react-navigation@1.x. Future improvements and development will be on react-navigation-fluid-transitions@0.2.x.
+Compatible versions with `react-navigation`:
+
+| react-navigation-fluid-transitions        | react-navigation |
+| ----------------------------------------- |:----------------:|
+| 0.3.x                                     | 3.x              |
+| 0.2.x                                     | 2.x              |
+| 0.1.x                                     | 1.x              |
+
+> Future improvements and development will be on react-navigation-fluid-transitions@0.3.x.
 
 ## Examples
 Examples are included in the project and should be runnable from the root of the project folder.
@@ -79,7 +87,7 @@ const Screen2 = (props) => (
   </View>
 );
 
-const Navigator = FluidNavigator({
+const Navigator = createFluidNavigator({
   screen1: { screen: Screen1 },
   screen2: { screen: Screen2 },
 });
@@ -129,6 +137,9 @@ myCustomTransitionFunction = (transitionInfo) => {
 ```
 
 Read more about the parameters and functionality for building [custom transitions](./docs/CustomTransition.md).
+
+### Native driver support
+For achieving the best experience it's vital to get rid of JS evaluation during animation run. React-native Animated API allows for scaling in both axis using native drivers, but it's not possible to resize width and height (which calls for a layout computation). Thus the native driver is used only when the ratio of source and target component are the same and it's recommended for the best quality of animations. 
 
 ### API
 
